@@ -11,9 +11,6 @@ pipeline {
             sh "chmod +x ./gradlew && ./gradlew clean build"
             
          }
-	 steps {
-	    sh "echo step2"
-	 }
 
          post {
             success {
@@ -21,6 +18,11 @@ pipeline {
                archiveArtifacts 'build/libs/*.war'
             }
          }
+      }
+      stage('sonar_scan') {
+         steps {
+	    sh "echo step2"
+	 }
       }
    }
 }
