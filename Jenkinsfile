@@ -9,6 +9,7 @@ pipeline {
 
             // Execute Gradle build.
             sh "chmod +x ./gradlew && ./gradlew clean build"
+			
             
          }
 
@@ -19,10 +20,15 @@ pipeline {
             }
          }
       }
-      stage('sonar_scan') {
-         steps {
-	    sh "echo step2"
-	 }
+      stage('build_docker_image') {
+        steps {
+			sh "docker build -t mahesh3267/sample-webapp:$BUILD_NUMBER ."
+		}
+      }
+	  stage('push_docker_image') {
+        steps {
+			sh "docker push mahesh3267/sample-webapp:$BUILD_NUMBER"
+		}
       }
    }
 }
