@@ -1,7 +1,8 @@
-/target/
 .classpath
 .project
 .gradle
+.settings
 bin
 build
 target
+.settings/org.eclipse.jdt.core.prefs
