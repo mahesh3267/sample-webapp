@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.learning</groupId>
-  <artifactId>sample-mkwebapp</artifactId>
-  <packaging>war</packaging>
+  <artifactId>sample-webapp2</artifactId>
   <version>1.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   <name>Test-WebApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -20,7 +20,18 @@
     <artifactId>javax.mail-api</artifactId>
     <version>1.6.2</version>
 </dependency>
-
+<!--
+<dependency>
+  <groupId>com.tutorial.app</groupId>
+  <artifactId>sample-java-app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+<dependency>
+    <groupId>com.tutorial.app</groupId>
+    <artifactId>sample-java-app</artifactId>
+    <version>1.0-20240414.104110-1</version>
+</dependency>
+-->
   </dependencies>
 <!--  <build>
     <finalName>Test-WebApp</finalName>
